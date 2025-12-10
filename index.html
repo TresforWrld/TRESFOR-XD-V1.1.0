@@ -48,7 +48,7 @@ function drawPlayer() {
   ctx.fillRect(player.x, player.y, player.width, player.height);
 }
 
-// Draw enemies
+// Draw enemies (purple boxes)
 function drawEnemies() {
   ctx.fillStyle = "purple";
   enemies.forEach(e => ctx.fillRect(e.x, e.y, e.width, e.height));
@@ -118,120 +118,6 @@ function draw(){
 
   drawPlayer();
   drawEnemies();
-}
-
-update();
-</script>
-</body>
-</html>  dy: 0,
-  speed: 5,
-  jumpForce: 15,
-  grounded: false
-};
-
-// Gravity
-const gravity = 0.8;
-
-// Platforms
-const platforms = [
-  { x: 0, y: canvas.height - 50, width: canvas.width, height: 50 },
-  { x: 200, y: canvas.height - 200, width: 200, height: 20 },
-  { x: 500, y: canvas.height - 350, width: 200, height: 20 },
-  { x: 800, y: canvas.height - 150, width: 300, height: 20 }
-];
-
-// Key input
-const keys = {};
-document.addEventListener("keydown", e => keys[e.key] = true);
-document.addEventListener("keyup", e => keys[e.key] = false);
-
-// Base64 Player Sprite
-const playerImg = new Image();
-playerImg.src = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAvklEQVRYR+3X0Q2DMBBG4XMQcwBnACcwA3MAmcARkARwgMchwKO1TaihmNiBs/MpUZx9dW9rIhwJzOR9fL2S9rtHclEXtA4G5nVc3YBB6QjW1eF0ZoXc9hllLQro4A1uU6q2vgujOyiTujlPj1FblH9uud78TBwATWvKe7XWnmkQDsJAgQSeJv3KSqGYgo0VoJ38BbBrbP4aYTwMoZv260E/6r0iY0R8sUDKLtNJ4w8zF5gWTSy9VW8g5vSEVrNQqILtAAAAAElFTkSuQmCC";
-
-// Draw player
-  function drawPlayer() {
-  ctx.fillStyle = "red";  // bright red
-  ctx.fillRect(player.x, player.y, player.width, player.height);
-  }
-// Enemies
-const enemies = [
-  { x: 400, y: canvas.height - 90, width: 40, height: 40, dx: 2 },
-  { x: 700, y: canvas.height - 190, width: 40, height: 40, dx: 3 }
-];
-// Update loop
-function update() {
-  // Move enemies
-enemies.forEach(enemy => {
-  enemy.x += enemy.dx;
-
-  // Reverse direction at platform edges
-  platforms.forEach(p => {
-    if (enemy.x <= p.x || enemy.x + enemy.width >= p.x + p.width) {
-      enemy.dx *= -1;
-    }
-  });
-
-  // Collision with player
-  if (
-    player.x < enemy.x + enemy.width &&
-    player.x + player.width > enemy.x &&
-    player.y < enemy.y + enemy.height &&
-    player.y + player.height > enemy.y
-  ) {
-    // Player hit: reset position
-    player.x = 100;
-    player.y = 0;
-    player.dy = 0;
-  }
-});
-  // Horizontal movement
-  if (keys["ArrowRight"] || keys["d"]) player.dx = player.speed;
-  else if (keys["ArrowLeft"] || keys["a"]) player.dx = -player.speed;
-  else player.dx = 0;
-
-  // Jump
-  if ((keys["ArrowUp"] || keys["w"]) && player.grounded) {
-    player.dy = -player.jumpForce;
-    player.grounded = false;
-  }
-
-  // Gravity
-  player.dy += gravity;
-
-  // Apply movement
-  player.x += player.dx;
-  player.y += player.dy;
-
-  // Platform collision
-  player.grounded = false;
-  platforms.forEach(p => {
-    if (
-      player.x < p.x + p.width &&
-      player.x + player.width > p.x &&
-      player.y + player.height < p.y + 20 &&
-      player.y + player.height + player.dy >= p.y
-    ) {
-      player.y = p.y - player.height;
-      player.dy = 0;
-      player.grounded = true;
-    }
-  });
-
-  draw();
-  requestAnimationFrame(update);
-}
-
-// Draw everything
-function draw() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-
-  // Player
-  drawPlayer();
-
-  // Platforms
-  ctx.fillStyle = "green";
-  platforms.forEach(p => ctx.fillRect(p.x, p.y, p.width, p.height));
 }
 
 // Start the game
