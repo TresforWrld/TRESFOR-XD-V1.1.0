@@ -1,40 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Clicker Game</title>
+  <meta charset="UTF-8">
+  <title>Platformer Game</title>
   <style>
     body {
-      font-family: Arial;
-      text-align: center;
-      margin-top: 100px;
+      margin: 0;
+      overflow: hidden;
+      background: #87CEEB;
+      font-family: Arial, sans-serif;
     }
-    #btn {
-      padding: 20px 40px;
-      font-size: 24px;
-      cursor: pointer;
-    }
-    #score {
-      font-size: 30px;
-      margin-top: 20px;
+
+    canvas {
+      display: block;
+      background: #222;
     }
   </style>
 </head>
 <body>
-  <h1>Clicker Game</h1>
 
-  <button id="btn">Click Me!</button>
+<canvas id="game"></canvas>
 
-  <div id="score">Score: 0</div>
+<script>
+const canvas = document.getElementById("game");
+const ctx = canvas.getContext("2d");
 
-  <script>
-    let score = 0;
-    const btn = document.getElementById("btn");
-    const scr = document.getElementById("score");
+canvas.width = window.innerWidth;
+canvas.height = window.innerHeight;
 
-    btn.onclick = () => {
-      score++;
-      scr.textContent = "Score: " + score;
+// Player object
+const player = {
+  x: 100,
+  y: 0,
+  width: 40,
+  height: 40,
+  dy: 0,
+  dx: 0,
+  speed: 5,
+  jumpForce: 15,
+  grounded: false
+};
+
+// Gravity
+const gravity = 0.8;
+
+// Platforms
+const platforms = [
+  { x: 0, y: canvas.height - 50, width: canvas.width, height: 50 },
+  { x: 200, y: canvas.height - 200, width: 200, height: 20 },
+  { x: 500, y: canvas.height - 350, width: 200, height: 20 },
+  { x: 800, y: canvas.height - 150, width: 300, height: 20 }
+];
+
+let keys = {};
+
+// Key events
+document.addEventListener("keydown", e => keys[e.key] = true);
+document.addEventListener("keyup", e => keys[e.key] = false);
+
+function update() {
+  // Horizontal movement
+  if (keys["ArrowRight"] || keys["d"]) player.dx = player.speed;
+  else if (keys["ArrowLeft"] || keys["a"]) player.dx = -player.speed;
+  else player.dx = 0;
+
+  // Jump
+  if ((keys["ArrowUp"] || keys["w"]) && player.grounded) {
+    player.dy = -player.jumpForce;
+    player.grounded = false;
+  }
+
+  // Apply gravity
+  player.dy += gravity;
+
+  // Apply movement
+  player.x += player.dx;
+  player.y += player.dy;
+
+  // Collision with platforms
+  player.grounded = false;
+  platforms.forEach(p => {
+    if (
+      player.x < p.x + p.width &&
+      player.x + player.width > p.x &&
+      player.y + player.height < p.y + 20 &&
+      player.y + player.height + player.dy >= p.y
+    ) {
+      player.y = p.y - player.height;
+      player.dy = 0;
+      player.grounded = true;
     }
-  </script>
+  });
+
+  draw();
+  requestAnimationFrame(update);
+}
+
+function draw() {
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+  // Player
+  ctx.fillStyle = "yellow";
+  ctx.fillRect(player.x, player.y, player.width, player.height);
+
+  // Platforms
+  ctx.fillStyle = "green";
+  platforms.forEach(p => {
+    ctx.fillRect(p.x, p.y, p.width, p.height);
+  });
+}
+
+update();
+</script>
+
 </body>
 </html>
