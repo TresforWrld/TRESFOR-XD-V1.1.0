@@ -72,6 +72,30 @@ const enemies = [
 ];
 // Update loop
 function update() {
+  // Move enemies
+enemies.forEach(enemy => {
+  enemy.x += enemy.dx;
+
+  // Reverse direction at platform edges
+  platforms.forEach(p => {
+    if (enemy.x <= p.x || enemy.x + enemy.width >= p.x + p.width) {
+      enemy.dx *= -1;
+    }
+  });
+
+  // Collision with player
+  if (
+    player.x < enemy.x + enemy.width &&
+    player.x + player.width > enemy.x &&
+    player.y < enemy.y + enemy.height &&
+    player.y + player.height > enemy.y
+  ) {
+    // Player hit: reset position
+    player.x = 100;
+    player.y = 0;
+    player.dy = 0;
+  }
+});
   // Horizontal movement
   if (keys["ArrowRight"] || keys["d"]) player.dx = player.speed;
   else if (keys["ArrowLeft"] || keys["a"]) player.dx = -player.speed;
