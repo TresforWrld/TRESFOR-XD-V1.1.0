@@ -1,8 +1,8 @@
-# 🤖✨ TRESFOR-XD
+# 🤖✨ TRESFOR-XD-V1.1.0
 
 <div align="center"> 
   <!-- Your branded bot image -->
-  <img src="https://i.postimg.cc/Sxq2q3fP/In-Collage-20250809-114513368.jpg" alt="TRESFOR-XD" height="300" />
+  <img src="https://i.postimg.cc/xCGG5QjD/bot-image.jpg" alt="TRESFOR-XD" height="300" />
 </div>
 
 ---
