@@ -2,30 +2,30 @@
 
 <div align="center"> 
   <!-- Your branded bot image -->
-  <img src="https://i.postimg.cc/xCGG5QjD/bot-image.jpg" alt="TRESFOR-XD" height="300" />
+  <img src="https://i.postimg.cc/xCGG5QjD/bot-image.jpg" alt="TRESFOR-XD-V1.1.0" height="300" />
 </div>
 
 ---
 
 <p align="center">
-  <a href="https://github.com/TresforWrld/TRESFOR-XD">
-    <img src="https://github.com/TresforWrld/TRESFOR-XD"style=for-the-badge&logo=github&label=Stars&color=yellow" alt=" "GitHub forks"/>
+  <a href="https://github.com/TresforWrld/TRESFOR-XD-V1.1.0">
+    <img src="https://github.com/TresforWrld/TRESFOR-XD-V1.1.0"style=for-the-badge&logo=github&label=Stars&color=yellow" alt=" "GitHub forks"/>
   </a>
-  <a href="https://github.com/TresforWrld/TRESFOR-XD/stargazers">
-    <img src="https://img.shields.io/github/stars/TresforWrld/TRESFOR-XD?style=for-the-badge&logo=github&label=Stars&color=yellow" alt="GitHub stars" />
+  <a href="https://github.com/TresforWrld/TRESFOR-XD-V1.1.0/stargazers">
+    <img src="https://img.shields.io/github/stars/TresforWrld/TRESFOR-XD-V1.1.0?style=for-the-badge&logo=github&label=Stars&color=yellow" alt="GitHub stars" />
   </a>
-  <a href="https://github.com/TresforWrld/TRESFOR-XD/issues">
-    <img src="https://img.shields.io/github/issues/ahmadtech12/TRESFOR-XD?style=for-the-badge&logo=github&label=Issues&color=red" alt="GitHub issues" />
+  <a href="https://github.com/TresforWrld/TRESFOR-XD-V1.1.0/issues">
+    <img src="https://img.shields.io/github/issues/ahmadtech12/TRESFOR-XD-V1.1.0?style=for-the-badge&logo=github&label=Issues&color=red" alt="GitHub issues" />
   </a>
-  <a href="https://www.npmjs.com/package/TRESFOR-XD">
-    <img src="https://img.shields.io/npm/v/TRESFOR-XD?style=for-the-badge&color=blue" alt="NPM version" />
+  <a href="https://www.npmjs.com/package/TRESFOR-XD-V1.1.0">
+    <img src="https://img.shields.io/npm/v/TRESFOR-XD-V1.1.0?style=for-the-badge&color=blue" alt="NPM version" />
   </a>
 </p>
 
 ---
 
 <div align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=32cd32,ff6347,1e90ff&center=true&width=400&height=40&lines=What+is+TRESFOR-XD%3F" alt="What is TRESFOR-XD?" />
+  <img src="https://readme-typing-svg.demolab.com?font=Fredoka+One&size=30&pause=1000&color=32cd32,ff6347,1e90ff&center=true&width=400&height=40&lines=What+is+TRESFOR-XD%3F" alt="What is TRESFOR-XD-V1.1.0?" />
 </div>
 
 <div align="center">
@@ -56,10 +56,10 @@ and your dedication is woven into the heart of this bot.
 
 🚀 1. Fork the Repository
 
-Click the button below to fork TRESFOR-XD repository to your GitHub account.
+Click the button below to fork TRESFOR-XD-V1.1.0 repository to your GitHub account.
 
 <p align="left">
-  <a href="https://github.com/TresforWrld/TRESFOR-XD/fork">
+  <a href="https://github.com/TresforWrld/TRESFOR-XD-V1.1.0/fork">
     <img src="https://img.shields.io/github/forks/ahmadtech12/IMRAN-BOT?style=for-the-badge&logo=github&logoColor=white&label=Forks&color=darkgreen" alt="Forks"/>
   </a>
 </p>
@@ -77,7 +77,7 @@ No extra steps, no hassle. Just easy setup. 😄
 💾 3. Download Bot Zip
 
 <p align="left">
-  <a href="https://github.com/TresforWrld/TRESFOR-XD/archive/refs/heads/main.zip">
+  <a href="https://github.com/TresforWrld/TRESFOR-XD-V1.1.0/archive/refs/heads/main.zip">
     <img src="https://img.shields.io/badge/Download-Zip-blueviolet?style=for-the-badge&logo=github" alt="Download ZIP"/>
   </a>
 </p>
