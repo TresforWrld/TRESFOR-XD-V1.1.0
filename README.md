@@ -87,7 +87,7 @@ No extra steps, no hassle. Just easy setup. 😄
 Watch the tutorial and deploy your bot easily.
 
 <div align="left">
-  <a href="https://youtube.com/@animewrldwars_anicade?si=rzw6LuizHpsEYmYi">
+  <a href="https://youtu.be/-BH9xQzr4nU?si=7wkGdmGrWgUHZNy9">
     <img src="https://img.shields.io/badge/TUTORIAL-red?style=for-the-badge&logo=youtube" alt="YouTube Tutorial"/>
   </a><br>
   <a href="https://bot-hosting.net/?aff=1307984754657726504">
@@ -133,7 +133,7 @@ This project is licensed under the **MIT License** — see the [LICENSE](LICENSE
 </div>
 
 <p align="center">
-  <a href="https://wa.me/260762493316" target="_blank" rel="noopener noreferrer">
+  <a href="https://wa.me/260777083995" target="_blank" rel="noopener noreferrer">
     <img title="WhatsApp Contact" src="https://img.shields.io/badge/WhatsApp-%2325D366?style=for-the-badge&logo=whatsapp&logoColor=white" alt="WhatsApp Contact" />
   </a>
   &nbsp;&nbsp;
